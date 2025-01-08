@@ -1,95 +1,76 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import Image from "next/image";
+
+
+import HobbyList from "@/app/_components/HobbyList";
+import ButtonLink from "./_components/ButtonLink";
+import Portfoliolink from "./_components/Portfoliolink";
+import { Hobby } from "@/app/_libs/microcms";
+
+
+const hobbies: Hobby[] = [
+  {
+    id: "1",
+    title: "好きなスポーツについて",
+    category: {
+      name: "趣味",
+    },
+    publishedAt: "2023/05/19",
+    createdAt: "2023/05/19",
+  },
+  {
+    id: "2",
+    title: "好きな食べ物について",
+    category: {
+      name: "好きなこと",
+    },
+    publishedAt: "2023/05/19",
+    createdAt: "2023/05/19",
+  },
+  {
+    id: "3",
+    title: "ランニングについて",
+    category: {
+      name: "趣味",
+    },
+    publishedAt: "2023/05/19",
+    createdAt: "2023/05/19",
+  },
+];
+
+const links = [
+  {
+    id: "01",
+    title: "自己紹介",
+    explanation: "自己紹介のことが書いてあります。",
+    button: "もっとみる",
+    url: "/about",
+  },
+  {
+    id: "02",
+    title: "スキル",
+    explanation: "プログラミングのスキルが書いてあります。",
+    button: "もっとみる",
+    url: "/skill",
+  },
+  {
+    id: "03",
+    title: "お問い合わせ",
+    explanation: "お問い合わせです。",
+    button: "もっとみる",
+    url: "/contact",
+  },
+];
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp; NOE IS A BIG FOOL!
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+        <HobbyList hobbies={hobbies} />
+        <div className={styles.hobbyLink}>
+          <ButtonLink href="/hobby">もっとみる</ButtonLink>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Portfoliolink links={links} />
+    </>
   );
 }

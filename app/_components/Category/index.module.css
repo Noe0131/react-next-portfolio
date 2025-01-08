@@ -1,0 +1,7 @@
+.category {
+    display: inline-block; 
+    padding: 0.2rem;
+    background-color: #a8c8a0;
+    border-radius: 0.2rem;
+    margin-bottom: 0.2rem;
+  }

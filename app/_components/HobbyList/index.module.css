@@ -1,0 +1,185 @@
+.top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    padding: 300px 0;
+}
+  
+  /* タイトル */
+.title {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 15%; 
+    transform: translate(-50%, -50%);
+    padding: 0.6rem;
+    width: auto;
+    height: auto;
+    line-height: 46px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50px;
+    border: 3px solid darkgreen;
+    color: darkgreen;
+    font-size: 2rem;
+    overflow: hidden;
+    background: transparent;
+    text-transform: uppercase;
+    transition: all 0.35s;
+}
+  
+.title:before,
+.title:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: seagreen;
+    z-index: -1;
+    transition: all 0.35s;
+}
+
+.title:before {
+    opacity: 0.5;
+}
+  
+.title:after {
+    transition-delay: 0.25s;
+}
+  
+.title:hover {
+    color: #fff;
+}
+  
+.title:hover:before,
+.title:hover:after {
+    top: 0;
+}
+  
+  /* 説明文 */
+.description {
+    position: absolute;
+    font-size: 1.3rem;
+    left: 50%;
+    top: 30%; 
+    transform: translate(-50%, 50%);
+    text-transform: uppercase;
+}
+  
+  /* 背景画像 */
+.bgimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hobby {
+    position: relative;
+    background-color: #fff;
+    width: 840px;
+    margin: -40px auto 0;
+    padding: 24px 40px;
+    border-radius: var(--border-radius);
+}
+  
+.hobbyTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    color: darkgreen;
+}
+
+.hobbyItem {
+    display: flex;
+    gap: 2rem;
+}
+
+.list { 
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 24px 0;
+}
+
+.image {
+    width: 250px;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.hobbyItemTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+  
+.category {
+    display: inline-block; 
+    padding: 0.2rem;
+    background-color: #a8c8a0;
+    border-radius: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0.4rem 0;
+    font-size: 1rem;
+}
+  
+.hobbyLink {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+  
+@media (max-width: 1000px) {
+    .hobby {
+      width: calc(100% - 160px);
+    }
+}
+
+@media (max-width: 640px) {
+    .title {
+      font-size: 1.2rem;
+      top: 10%;
+      transform: translate(-50%, 0);
+    }
+  
+    .description {
+      font-size: 1rem;
+      top: 30%;
+      transform: translate(-50%, 0);
+    }
+  
+    .bgimg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      z-index: -1;
+    }
+  
+    .image {
+      width: calc(100% - 200px);
+      height: auto;
+    }
+  
+    .hobby {
+      width: calc(100% - 32px);
+      padding: 16px 24px;
+    }
+}
+  
