@@ -1,0 +1,35 @@
+.footer {
+    border-top: 1px solid forestgreen;
+    padding: 16px 24px;
+    text-align: center;
+    color: var(--color-text-sub);
+    font-size: 1rem;
+    margin-top: 80px;
+}
+
+.nav {
+    margin-bottom: 1rem;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+.item:hover {
+    color: #000;
+}
+
+
+@media  (max-width: 640px) {
+    .items {
+        flex-wrap: wrap;
+        gap: 8px ;
+    }
+    .item {
+        width: 50%;
+    }
+}
+    
