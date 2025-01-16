@@ -1,6 +1,10 @@
+
 import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import BackToTopButton from "./_components/BackToTopButton";
+
+
 
 export default function RootLayout({
   children,
@@ -11,11 +15,12 @@ export default function RootLayout({
     <html lang="ja">
       <head>
       <link rel="icon" href="/N.png" />
-        <title>ポートフォリオトップページ</title>
+        <title>ポートフォリオ</title>
       </head>
       <body>
         <Header />
         {children}
+        <BackToTopButton />
         <Footer />
       </body>
     </html>

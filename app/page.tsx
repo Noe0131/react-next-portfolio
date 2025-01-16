@@ -1,10 +1,12 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 
-
+import PageTransition from "./_components/PageTransition";
+import Footer from "./_components/Footer";
 import HobbyList from "@/app/_components/HobbyList";
 import ButtonLink from "./_components/ButtonLink";
 import Portfoliolink from "./_components/Portfoliolink";
+import BirdIcon from "./_components/BirdIcon";
 import { Hobby } from "@/app/_libs/microcms";
 
 
@@ -65,12 +67,15 @@ const links = [
 
 export default function Home() {
   return (
-    <>
+    <>  
+      <PageTransition>
         <HobbyList hobbies={hobbies} />
         <div className={styles.hobbyLink}>
           <ButtonLink href="/hobby">もっとみる</ButtonLink>
+          <BirdIcon bird="" birdtype_2="" birdtype_3="" />
         </div>
       <Portfoliolink links={links} />
+      </PageTransition>
     </>
   );
 }

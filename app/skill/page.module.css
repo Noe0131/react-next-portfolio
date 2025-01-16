@@ -1,0 +1,31 @@
+
+
+@keyframes filling {
+  from{
+    background-position: center 25%;
+  }
+  to {
+    background-position: center 50%;
+  }
+}
+
+.containerText {
+  background-image:  url(https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color:  #FFFFFF;
+  padding-top: 20px;
+  font-size: 5rem;
+  font-family: ui-monospace ;
+  animation: filling 5s ease forwards;
+  
+}
+
+@media (max-width: 768px) {
+  .containerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+  }
+}

@@ -46,6 +46,7 @@
     text-align:center;
     transition:0.5s;
     position:relative;
+    border-radius: var(--border-radius);
 }
   
 .portfolioButton:before{

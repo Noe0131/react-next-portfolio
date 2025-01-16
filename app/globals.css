@@ -1,3 +1,5 @@
+
+
 :root {
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
@@ -16,6 +18,7 @@
   --color-current: #eee;
   --color-button-primary: #333;
   --border-radius: 4px;
+  --color-main: #8fbc8f;
 }
 
 * {

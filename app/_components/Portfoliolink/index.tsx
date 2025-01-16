@@ -16,7 +16,7 @@ type PortfoliolinkProps = {
 export default function Portfoliolink({ links }: PortfoliolinkProps) {
   return (
     <>
-      <h2 className={styles.portfolio}>ポートフォリオリンク一覧</h2>
+      <h2 className={styles.portfolio}>ポートフォリオ</h2>
       <dl className={styles.container}>
         {links.map((link) => (
           <dd key={link.id} className={styles.linkItem}>

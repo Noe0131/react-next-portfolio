@@ -1,22 +1,78 @@
 .header {
-    position: absolute;
-    padding: 16px 24px 8px;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    width: 100%;
+  position: relative;
+  padding: 16px 24px 8px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--color-text-sub);
 }
 
 .logoLink {
-    display: flex;
+  display: flex;
 }
 
 .logo {
-    border-radius: var(--border-radius);
-    height: 70px;
-    width: auto;
+  border-radius: var(--border-radius);
+  height: 60px;
+  width: auto;
+}
+/* ---------Link------------- */
+.items {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  color: forestgreen;
+  font-size: 1.5rem;
+  gap: 1.2rem;
 }
 
+.item {
+  position: relative;
+  display: inline-block;
+}
+
+.item::before,
+.item::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: darkgreen;
+  transition: .3s;
+}
+
+.item::before {
+  top: 0;
+  left: 0;
+}
+
+.item::after {
+  bottom: 0;
+  right: 0;
+}
+
+.item:hover::before,
+.item:hover::after {
+  width: 100%;
+}
+
+.contact {
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #b89572 0%, #804000 100%);
+  transition: .4s;
+}
+
+.contact:hover {
+  background-image: linear-gradient(45deg, #b89572 0%, #552b00 100%);
+}
+/* -------------------------- */
+  
 @media  (max-width: 640px) {
     .header {
         padding: 24px 16px 8px;

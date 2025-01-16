@@ -1,14 +1,24 @@
 export type Category = {
-    name: string;
+  name: string; 
 };
-
 
 export type Hobby = {
-    id: string;
-    title: string;
-    category: {
-      name: string;
-    };
-    publishedAt: string;
-    createdAt: string;
+  id: string; 
+  title: string; 
+  category: Category; 
+  publishedAt: string; 
+  createdAt: string; 
 };
+
+export type Skill = {
+  id: string; 
+  imageUrl: string;  
+  language: string;  
+  category: {
+    system: string;
+    generalLevel: string; 
+  };
+  explanation: string;  
+};
+
+

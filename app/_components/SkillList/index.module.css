@@ -1,0 +1,59 @@
+.skillListContainer {
+  text-align: start;
+  padding: 2rem;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; 
+}
+
+.skillItem {
+  width: 100%; 
+}
+
+.skillImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.skillLanguage {
+  font-size: 1.7rem;
+}
+
+.system {
+  font-size: 1.2rem;
+}
+
+.generalLevel {
+  font-size: 1,2rem;
+}
+
+.skillExplanation {
+  font-size: 1.1rem;
+}
+
+
+@media (max-width: 1240px) {
+  .skillListContainer {
+    grid-template-columns: repeat(2, 1fr); 
+    text-align: start;
+    gap: 1rem;
+  }
+
+  .skillImage {
+    width: 95%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillListContainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .skillImage {
+    width: 90%;  
+    margin: 0 auto; 
+  }
+}

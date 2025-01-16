@@ -150,36 +150,42 @@
 }
 
 @media (max-width: 640px) {
+
     .title {
-      font-size: 1.2rem;
-      top: 10%;
-      transform: translate(-50%, 0);
+        font-size: 1.2rem;
+        top: 10%;
+        transform: translate(-50%, 0);
     }
   
     .description {
-      font-size: 1rem;
-      top: 30%;
-      transform: translate(-50%, 0);
+        font-size: 1rem;
+        top: 30%;
+        transform: translate(-50%, 0);
     }
   
     .bgimg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        z-index: -1;
     }
-  
+    
+    .list { 
+        display: flex;
+        flex-direction: column;
+    }
+
     .image {
-      width: calc(100% - 200px);
-      height: auto;
+        width: calc(100% - 200px);
+        height: auto;
     }
   
     .hobby {
-      width: calc(100% - 32px);
-      padding: 16px 24px;
+        width: calc(100% - 32px);
+        padding: 16px 24px;
     }
 }
   

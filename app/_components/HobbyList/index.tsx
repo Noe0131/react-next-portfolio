@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 import Category from "../Category";
 import Date from "../Date";
 import styles from "./index.module.css";
@@ -31,7 +31,7 @@ export default function Home({ hobbies }: Props) {
         <ul>
           {hobbies.map((article) => (
             <li key={article.id} className={styles.list}>
-              <div className={styles.hobbyItem}>
+                <Link href={`/hobby/${article.id}`} className={styles.link}>
                 <Image
                   className={styles.image}
                   src="/no-image.png"
@@ -39,12 +39,12 @@ export default function Home({ hobbies }: Props) {
                   width={1200}
                   height={630}
                 />
-                <dl>
+                </Link>
+                <Link href={`/hobby/${article.id}`} className={styles.link}>
                   <dt className={styles.hobbyItemTitle}>{article.title}</dt>
                     <Category category={article.category} />
                     <Date date={article.publishedAt ?? article.createdAt} />
-                </dl>
-              </div>
+                </Link>
             </li>
           ))}
         </ul>
