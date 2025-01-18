@@ -1,10 +1,10 @@
-'use client';
-
 import styles from "./page.module.css";
 import PageTransition from "../_components/PageTransition";
 import SkillList from "../_components/SkillList"; 
+import { Later } from "@/app/_libs/microcms";
 import { Skill } from "@/app/_libs/microcms";
-
+import { skillList } from "@/app/_libs/microcms";
+import AfterList from "../_components/Later";
 
 const Skills: Skill[] = [
   {
@@ -100,30 +100,25 @@ const Skills: Skill[] = [
   {
     id: "10",
     imageUrl: "/no-image.png",
-    language: "Word",
-    category: {
-      system: "ビジネスツール",
-      generalLevel: "★★☆☆☆",
-    },
-    explanation: "文書作成と編集に使用されるツールです。",
-  },
-  {
-    id: "11",
-    imageUrl: "/no-image.png",
     language: "PowerPoint",
     category: {
       system: "ビジネスツール",
-      generalLevel: "★★☆☆☆",
+      generalLevel: "★☆☆☆☆"
     },
     explanation: "プレゼンテーションを作成するためのツールです。",
   },
 ];
 
-export default function SkillPage() {
+
+
+export default async function SkillPage() {
+  const data = (await skillList()).contents;
   return (
     <PageTransition>
       <h1 className={styles.containerText}>学んでいるスキル</h1>
       <SkillList skills={Skills} />
+      <h1 >今後学びたいスキル</h1>
+      <AfterList After={data} />
     </PageTransition>
   );
 }
