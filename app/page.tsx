@@ -13,7 +13,7 @@ import { Hobby } from "@/app/_libs/microcms";
 const hobbies: Hobby[] = [
   {
     id: "1",
-    title: "好きなスポーツについて",
+    title: "好きなスポーツ観戦について",
     category: {
       name: "趣味",
     },

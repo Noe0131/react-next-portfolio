@@ -1,0 +1,1 @@
+export const skillList_LIST_LIMIT = 100;

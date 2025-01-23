@@ -5,6 +5,7 @@ import { Later } from "@/app/_libs/microcms";
 import { Skill } from "@/app/_libs/microcms";
 import { skillList } from "@/app/_libs/microcms";
 import AfterList from "../_components/Later";
+import { skillList_LIST_LIMIT } from "@/app/_constants"
 
 const Skills: Skill[] = [
   {
@@ -59,7 +60,7 @@ const Skills: Skill[] = [
   },
   {
     id: "6",
-    imageUrl: "/no-image.png",
+    imageUrl: "Skill/v.png",
     language: "vue.js",
     category: {
       system: "プログラミング言語・ライブラリ",
@@ -69,7 +70,7 @@ const Skills: Skill[] = [
   },
   {
     id: "7",
-    imageUrl: "/no-image.png",
+    imageUrl: "Skill/illustrator.png",
     language: "Illustrator",
     category: {
       system: "デザインツール",
@@ -79,7 +80,7 @@ const Skills: Skill[] = [
   },
   {
     id: "8",
-    imageUrl: "/no-image.png",
+    imageUrl: "",
     language: "Photoshop",
     category: {
       system: "デザインツール",
@@ -89,7 +90,7 @@ const Skills: Skill[] = [
   },
   {
     id: "9",
-    imageUrl: "/no-image.png",
+    imageUrl: "Skill/excel.webp",
     language: "Excel",
     category: {
       system: "ビジネスツール",
@@ -99,7 +100,7 @@ const Skills: Skill[] = [
   },
   {
     id: "10",
-    imageUrl: "/no-image.png",
+    imageUrl: "Skill/PPT.png",
     language: "PowerPoint",
     category: {
       system: "ビジネスツール",
@@ -112,12 +113,12 @@ const Skills: Skill[] = [
 
 
 export default async function SkillPage() {
-  const data = (await skillList()).contents;
+  const data = (await skillList({ limit: skillList_LIST_LIMIT })).contents;
   return (
     <PageTransition>
       <h1 className={styles.containerText}>学んでいるスキル</h1>
       <SkillList skills={Skills} />
-      <h1 >今後学びたいスキル</h1>
+      <h1 className={styles.containerText}>今後学びたいスキル</h1>
       <AfterList After={data} />
     </PageTransition>
   );

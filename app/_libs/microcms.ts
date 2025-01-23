@@ -30,7 +30,6 @@ import type {
   MicroCMSListContent,
 } from "microcms-js-sdk"; 
 
-// Later 型の定義
 export type Later = {
   imageUrl: {
     url: string,

@@ -10,7 +10,7 @@
 }
 
 .containerText {
-  background-image:  url(https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg);
+  background-image:  url(https://www.sozailab.jp/db_img/sozai/63072/366f45d7fd6d3660ed828c6400cd3e24.jpg);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   color:  #FFFFFF;
@@ -21,11 +21,22 @@
   
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .containerText {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
+
+@media  (max-width: 767px) {
+  .containerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+  }
+}
+  
+
