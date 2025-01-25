@@ -1,15 +1,14 @@
-
 export type Category = {
-  name: string; 
-};
+  name: string;
+  } & MicroCMSListContent;
 
 export type Hobby = {
-  id: string; 
-  title: string; 
-  category: Category; 
-  publishedAt: string; 
-  createdAt: string; 
-};
+  thumbnail: MicroCMSImage;
+  title: string;
+  description: string;
+  category: Category
+  } & MicroCMSListContent;
+
 
 export type Skill = {
   id: string; 
@@ -22,6 +21,7 @@ export type Skill = {
   explanation: string;  
 };
 
+import exp from "constants";
 import { SrvRecord } from "dns";
 import { createClient } from "microcms-js-sdk";
 import type {
@@ -68,3 +68,12 @@ export const skillList = async (queries?: MicroCMSQueries) => {
     throw error; 
   }
 };
+
+
+export const hobbyList = async (queries?: MicroCMSQueries) => {
+    const listData = await client.getList<Hobby>({
+      endpoint: "hobby",
+      queries,
+    });
+    return listData;
+  }

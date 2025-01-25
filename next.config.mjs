@@ -1,14 +1,14 @@
-import { image } from 'motion/react-client';
-import { hostname } from 'os';
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
     images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "images.microcms-assets.io",
-            }
-        ]
-    }
-export default nextConfig;
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'images.microcms-assets.io',
+        },
+      ],
+    },
+  };
+  
+  export default nextConfig;
+  

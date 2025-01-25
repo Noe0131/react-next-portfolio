@@ -1,44 +1,15 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 
+
+import { hobbyList } from "@/app/_libs/microcms";
+import { HobbyList_LIST_LIMIT } from "@/app/_constants/index";
 import PageTransition from "./_components/PageTransition";
 import Footer from "./_components/Footer";
 import HobbyList from "@/app/_components/HobbyList";
 import ButtonLink from "./_components/ButtonLink";
 import Portfoliolink from "./_components/Portfoliolink";
 import BirdIcon from "./_components/BirdIcon";
-import { Hobby } from "@/app/_libs/microcms";
-
-
-const hobbies: Hobby[] = [
-  {
-    id: "1",
-    title: "好きなスポーツ観戦について",
-    category: {
-      name: "趣味",
-    },
-    publishedAt: "2023/05/19",
-    createdAt: "2023/05/19",
-  },
-  {
-    id: "2",
-    title: "好きな食べ物について",
-    category: {
-      name: "好きなこと",
-    },
-    publishedAt: "2023/05/19",
-    createdAt: "2023/05/19",
-  },
-  {
-    id: "3",
-    title: "ランニングについて",
-    category: {
-      name: "趣味",
-    },
-    publishedAt: "2023/05/19",
-    createdAt: "2023/05/19",
-  },
-];
 
 const links = [
   {
@@ -65,11 +36,16 @@ const links = [
 ];
 
 
-export default function Home() {
+export default async function Home() {
+
+  const data = await hobbyList({
+    limit: HobbyList_LIST_LIMIT ,
+  });
+
   return (
     <>  
       <PageTransition>
-        <HobbyList hobbies={hobbies} />
+        <HobbyList hobbies={data.contents} />
         <div className={styles.hobbyLink}>
           <ButtonLink href="/hobby">もっとみる</ButtonLink>
           <BirdIcon bird="" birdtype_2="" birdtype_3="" />

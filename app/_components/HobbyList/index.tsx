@@ -32,17 +32,27 @@ export default function Home({ hobbies }: Props) {
           {hobbies.map((article) => (
             <li key={article.id} className={styles.list}>
                 <Link href={`/hobby/${article.id}`} className={styles.link}>
-                <Image
-                  className={styles.image}
-                  src="/no-image.png"
-                  alt="No Image"
-                  width={1200}
-                  height={630}
-                />
+                  {article.thumbnail ? (
+                  <Image
+                    src={article.thumbnail.url}
+                    alt=""
+                    className={styles.image}
+                    width={article.thumbnail.width}
+                    height={article.thumbnail.height}
+                  />
+                ) : (
+                  <Image
+                    className={styles.image}
+                    src="/no-image.png"
+                    alt="no"
+                    width={1200}
+                    height={630}
+                  />
+                )}
                 </Link>
                 <Link href={`/hobby/${article.id}`} className={styles.link}>
                   <dt className={styles.hobbyItemTitle}>{article.title}</dt>
-                    <Category category={article.category} />
+                    <Category categories={article.category} />
                     <Date date={article.publishedAt ?? article.createdAt} />
                 </Link>
             </li>
