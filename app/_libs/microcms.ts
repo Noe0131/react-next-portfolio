@@ -6,7 +6,7 @@ export type Hobby = {
   thumbnail: MicroCMSImage;
   title: string;
   description: string;
-  category: Category
+  category: Category[]
   } & MicroCMSListContent;
 
 
@@ -73,7 +73,20 @@ export const skillList = async (queries?: MicroCMSQueries) => {
 export const hobbyList = async (queries?: MicroCMSQueries) => {
     const listData = await client.getList<Hobby>({
       endpoint: "hobby",
-      queries,
+      queries, 
     });
     return listData;
   }
+
+
+export const getHobbyDetail = async (
+  contentId :string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<Hobby>({
+    endpoint: "hobby",
+    contentId,
+    queries,
+  });
+  return detailData;
+};

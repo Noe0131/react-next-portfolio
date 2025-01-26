@@ -39,7 +39,7 @@ const links = [
 export default async function Home() {
 
   const data = await hobbyList({
-    limit: HobbyList_LIST_LIMIT ,
+    limit: HobbyList_LIST_LIMIT,
   });
 
   return (
