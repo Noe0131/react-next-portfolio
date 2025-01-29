@@ -8,7 +8,7 @@ export default function Header() {
         <header className={styles.header}>
             <Link href="/" className={styles.logoLink}>
                 <Image
-                    src="/N.png"
+                    src="/about/No.png"
                     alt="N"
                     className={styles.logo}
                     width={50} 

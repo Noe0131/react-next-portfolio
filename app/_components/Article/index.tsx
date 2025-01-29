@@ -9,22 +9,24 @@ type Props = {
     data: Hobby;
 }
 
-export default function Article({data} : Props) {
+export default function Article({ data }: Props) {
     return (
         <main>
-            <Image 
-                src={data.thumbnail.url}
-                alt="Thumbnail"
-                className={styles.thumbnail}
-                width={data.thumbnail.width} 
-                height={data.thumbnail.height} 
-            /> 
-            <h1 className={styles.thumbnail}>{data.title}</h1>
-            <div className={styles.mate}>
-                <Category categories={data.category} />
-                <Date date={data.publishedAt ?? data.createdAt}/>
+            <div className={styles.whole}>
+                <Image
+                    src={data.thumbnail.url}
+                    alt="Thumbnail"
+                    className={styles.thumbnail}
+                    width={data.thumbnail.width}
+                    height={data.thumbnail.height}
+                />
+                <h1 className={styles.title}>{data.title}</h1>
+                <div className={styles.meta}>
+                    <Category categories={data.category} />
+                    <Date date={data.publishedAt ?? data.createdAt} />
+                </div>
+                <p className={styles.description}>{data.description}</p>
             </div>
-            <p className={styles.description}>{data.description}</p>
         </main>
     );
-};
+}

@@ -21,7 +21,21 @@ export type Skill = {
   explanation: string;  
 };
 
+export type About = {
+  name: string;
+  explanation: string;
+  imageUrl: string;
+}
+
+export type My = {
+  imageUrl: string;
+  about: string;
+  aboutme: string;
+  explanation: string; 
+}
+
 import exp from "constants";
+import dayjs from "dayjs";
 import { SrvRecord } from "dns";
 import { createClient } from "microcms-js-sdk";
 import type {
@@ -29,6 +43,7 @@ import type {
   MicroCMSImage,
   MicroCMSListContent,
 } from "microcms-js-sdk"; 
+import { title } from "process";
 
 export type Later = {
   imageUrl: {
@@ -90,3 +105,7 @@ export const getHobbyDetail = async (
   });
   return detailData;
 };
+
+
+
+
