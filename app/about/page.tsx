@@ -14,7 +14,7 @@ const aboutData: About[] = [
 
 const mYData: My[] = [
   {
-    imageUrl: "/about/No.png",
+    imageUrl: "/About/No.png",
     about: "abotme",
     aboutme: "僕について",
     explanation: "ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
