@@ -50,7 +50,7 @@ const Skills: Skill[] = [
   },
   {
     id: "5",
-    imageUrl: "Skill/Python-logo.png",
+    imageUrl: "Skill/Python.png",
     language: "Python",
     category: {
       system: "プログラミング言語・ライブラリ",
