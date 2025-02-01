@@ -15,7 +15,7 @@ const aboutData: About[] = [
 const mYData: My[] = [
   {
     imageUrl: "/About/No.png",
-    about: "abotme",
+    about: "About me",
     aboutme: "僕について",
     explanation: `京都デザイン＆テクノロジー専門学校: スーパーITエンジニア専攻。
     現在、TypeScript と Vue.js を中心に学習を進めています。フロントエンド開発のスキルを磨きながら、効率的で拡張性の高いコードを書くことを目指しています。`
