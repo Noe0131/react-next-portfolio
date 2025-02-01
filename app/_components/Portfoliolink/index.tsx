@@ -22,7 +22,7 @@ export default function Portfoliolink({ links }: PortfoliolinkProps) {
           <dd key={link.id} className={styles.linkItem}>
             <Image
               className={styles.img}
-              src="/no-image.png"
+              src="/wait.png"
               alt="no"
               width={400}
               height={300}

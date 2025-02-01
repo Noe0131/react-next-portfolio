@@ -80,7 +80,7 @@ const Skills: Skill[] = [
   },
   {
     id: "8",
-    imageUrl: "",
+    imageUrl: "Skill/photoshop.png",
     language: "Photoshop",
     category: {
       system: "デザインツール",
