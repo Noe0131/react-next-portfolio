@@ -7,7 +7,7 @@ import PageTransition from "../_components/PageTransition";
 const aboutData: About[] = [
   {
     name: "ボールドン ノエ",
-    explanation: "今はタイプスクリプト、vue.jsを主に学んでいます。",
+    explanation: "京都デザイン＆テクノロジー専門学校在学中です。",
     imageUrl: "/About/rose.jpg"
   },
 ];
@@ -17,7 +17,8 @@ const mYData: My[] = [
     imageUrl: "/About/No.png",
     about: "abotme",
     aboutme: "僕について",
-    explanation: "ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
+    explanation: `京都デザイン＆テクノロジー専門学校: スーパーITエンジニア専攻。
+    現在、TypeScript と Vue.js を中心に学習を進めています。フロントエンド開発のスキルを磨きながら、効率的で拡張性の高いコードを書くことを目指しています。`
   },
 ];
 
