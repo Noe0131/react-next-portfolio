@@ -1,22 +1,29 @@
 
 .portfolio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
-    font-size: 1.7rem;
-    color: darkgreen;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  font-size: 1.7rem;
+  color: darkgreen;
+}
   
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
-  
-  .img {
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.linkItem {
+  padding: 1rem;
+  flex-grow: 2;
+  flex-basis: calc(33.333% - 1.5rem);
+}
+
+.img {
     border-radius: 8px;
     object-fit: cover;
     width: 100%; 
@@ -73,7 +80,7 @@
     right:20px;
 }
   
-  @media (max-width: 640px) {
+  @media (max-width: 767px) {
     .container {
       display: flex;
       flex-direction: column; 

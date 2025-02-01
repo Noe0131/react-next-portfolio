@@ -154,13 +154,12 @@
     .title {
         font-size: 1.2rem;
         top: 10%;
-        transform: translate(-50%, 0);
     }
   
     .description {
         font-size: 1rem;
         top: 30%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%,);
     }
   
     .bgimg {
@@ -179,12 +178,13 @@
     }
 
     .image {
-        width: calc(100% - 200px);
-        height: auto;
+        width: 100%; /* 幅いっぱいに広げる */
+        max-width: 300px; /* ただし最大サイズは維持 */
+        
     }
   
     .hobby {
-        width: calc(100% - 32px);
+        
         padding: 16px 24px;
     }
 }

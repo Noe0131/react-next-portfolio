@@ -14,7 +14,7 @@ export default function HamburgerButton({ isOpen, toggleMenu }: Props) {
             className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
             onClick={toggleMenu}
             aria-label="Toggle menu"
-        >
+        >   
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
