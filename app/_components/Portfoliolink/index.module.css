@@ -1,4 +1,3 @@
-
 .portfolio {
   display: flex;
   justify-content: center;
@@ -7,10 +6,12 @@
   font-size: 1.7rem;
   color: darkgreen;
 }
-  
+
 .container {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
@@ -20,69 +21,91 @@
 .linkItem {
   padding: 1rem;
   flex-grow: 2;
-  flex-basis: calc(33.333% - 1.5rem);
+  flex-basis: calc(33.333% - 20px);
 }
 
-.img {
-    border-radius: 8px;
-    object-fit: cover;
-    width: 100%; 
-    height: auto;
-  }
-  
-  
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
 .portfoliotitle {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
-  
+
 .portfolioexplanation {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-  
+
 .portfolioButton {
-    text-decoration:none;
-    color: darkgreen;
-    background-color: #8fbc8f;
-    font-weight:bold;
-    display:block;
-    max-width:180px;
-    margin:0 auto;
-    margin-top: 0.4rem;
-    border:solid 4px darkgreen;
-    line-height:60px;
-    text-align:center;
-    transition:0.5s;
-    position:relative;
-    border-radius: var(--border-radius);
+  text-decoration: none;
+  color: darkgreen;
+  background-color: #8fbc8f;
+  font-weight: bold;
+  display: block;
+  max-width: 180px;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  border: solid 4px darkgreen;
+  line-height: 60px;
+  text-align: center;
+  transition: 0.5s;
+  position: relative;
+  border-radius: var(--border-radius);
 }
-  
-.portfolioButton:before{
-    content:"";
-    display:block;
-    width:10px;
-    height:10px;
-    border-right:solid 3px darkgreen;
-    border-bottom:solid 3px darkgreen;
-    position:absolute;
-    transform:rotate(-45deg);
-    transition:0.5s;
-    right:25px;
-    top:50%;
-    margin-top:-7px;
+
+.portfolioButton:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: solid 3px darkgreen;
+  border-bottom: solid 3px darkgreen;
+  position: absolute;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  right: 25px;
+  top: 50%;
+  margin-top: -7px;
 }
-  
-.portfolioButton:hover{
-    color: forestgreen;
-    background-color: #8fbc8f;
+
+.portfolioButton:hover {
+  color: forestgreen;
+  background-color: #8fbc8f;
 }
-.portfolioButton:hover:before{
-    border-color: forestgreen;
-    right:20px;
+
+.portfolioButton:hover:before {
+  border-color: forestgreen;
+  right: 20px;
 }
-  
-  @media (max-width: 767px) {
-    .container {
-      display: flex;
-      flex-direction: column; 
-    }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
   }
+
+  .linkItem {
+    flex-basis: calc(50% - 1rem);
+    max-width: 50%; 
+    margin:  0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .linkItem {
+    max-width: 80%; 
+    margin:  0 auto;
+  }
+}

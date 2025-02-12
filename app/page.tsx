@@ -10,11 +10,13 @@ import HobbyList from "@/app/_components/HobbyList";
 import ButtonLink from "./_components/ButtonLink";
 import Portfoliolink from "./_components/Portfoliolink";
 import BirdIcon from "./_components/BirdIcon";
+import { image } from "motion/react-client";
 
 const links = [
   {
     id: "01",
     title: "自己紹介",
+    img: "about.png",
     explanation: "自己紹介のことが書いてあります。",
     button: "もっとみる",
     url: "/about",
@@ -22,12 +24,14 @@ const links = [
   {
     id: "02",
     title: "スキル",
+    img: "skill.png",
     explanation: "プログラミングのスキルが書いてあります。",
     button: "もっとみる",
     url: "/skill",
   },
   {
     id: "03",
+    img: "contact.png",
     title: "お問い合わせ",
     explanation: "お問い合わせです。",
     button: "もっとみる",
@@ -43,14 +47,14 @@ export default async function Home() {
   });
 
   return (
-    <>  
+    <>
       <PageTransition>
         <HobbyList hobbies={data.contents} />
         <div className={styles.hobbyLink}>
           <ButtonLink href="/hobby">もっとみる</ButtonLink>
           <BirdIcon bird="" birdtype_2="" birdtype_3="" />
         </div>
-      <Portfoliolink links={links} />
+        <Portfoliolink links={links} />
       </PageTransition>
     </>
   );

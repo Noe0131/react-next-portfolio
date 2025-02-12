@@ -3,6 +3,7 @@ import Image from "next/image";
 
 type Link = {
   id: string;
+  img: string;
   title: string;
   explanation: string;
   button: string;
@@ -20,13 +21,7 @@ export default function Portfoliolink({ links }: PortfoliolinkProps) {
       <dl className={styles.container}>
         {links.map((link) => (
           <dd key={link.id} className={styles.linkItem}>
-            <Image
-              className={styles.img}
-              src="/wait.png"
-              alt="no"
-              width={400}
-              height={300}
-            />
+            <img className={styles.image} src={link.img}></img>
             <h3 className={styles.portfolioTitle}>{link.title}</h3>
             <p className={styles.portfolioExplanation}>{link.explanation}</p>
             <a
