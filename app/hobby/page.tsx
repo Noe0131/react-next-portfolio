@@ -14,7 +14,7 @@ export default async function Page() {
     return (
         <>  
             <PageTransition>
-                <BirdIcon bird="" birdtype_2="" birdtype_3="" />
+                {/* <BirdIcon bird="" birdtype_2="" birdtype_3="" />いったん消す */}
                 <HobbyList hobbies={hobby} />
             </PageTransition>
         </>

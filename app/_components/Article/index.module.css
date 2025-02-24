@@ -1,5 +1,8 @@
 .whole {
-    padding: 3rem 9rem;
+    max-width: 1200px;
+    margin-top: 5rem;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 .thumbnail {

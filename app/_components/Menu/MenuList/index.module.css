@@ -107,5 +107,43 @@
     }
 }
 
+/* ------------------------------
+    アイコン
+  ------------------------------ */
+  .hobby::before {
+    content: "";
+    background-image: url("/icon/hobby.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  .me::before {
+    content: "";
+    background-image: url("/icon/me.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  .skill::before {
+    content: "";
+    background-image: url("/icon/skill.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
 
 

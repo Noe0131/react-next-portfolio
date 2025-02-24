@@ -52,7 +52,7 @@ export default async function Home() {
         <HobbyList hobbies={data.contents} />
         <div className={styles.hobbyLink}>
           <ButtonLink href="/hobby">もっとみる</ButtonLink>
-          <BirdIcon bird="" birdtype_2="" birdtype_3="" />
+          {/* <BirdIcon bird="" birdtype_2="" birdtype_3="" />いったん消す */}
         </div>
         <Portfoliolink links={links} />
       </PageTransition>
