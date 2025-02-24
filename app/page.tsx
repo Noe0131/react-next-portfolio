@@ -16,7 +16,7 @@ const links = [
   {
     id: "01",
     title: "自己紹介",
-    img: "about.png",
+    img: "linkimg/me.png",
     explanation: "自己紹介のことが書いてあります。",
     button: "もっとみる",
     url: "/about",
@@ -24,14 +24,14 @@ const links = [
   {
     id: "02",
     title: "スキル",
-    img: "skill.png",
+    img: "linkimg/ts.jpg",
     explanation: "プログラミングのスキルが書いてあります。",
     button: "もっとみる",
     url: "/skill",
   },
   {
     id: "03",
-    img: "contact.png",
+    img: "linkimg/contact.jpg",
     title: "お問い合わせ",
     explanation: "お問い合わせです。",
     button: "もっとみる",
